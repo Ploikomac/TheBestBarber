@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Best Barber | Marrakech Almazar - Excellence Coiffure</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#F1D592',
+                            DEFAULT: '#D4AF37',
+                            dark: '#996515',
+                        },
+                        rich: '#0A0A0A',
+                        luxury: '#121212'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #080808; color: #E5E7EB; margin: 0; padding: 0; }
+        
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #996515 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .gold-border-gradient {
+            border: 1px solid;
+            border-image-source: linear-gradient(135deg, #D4AF37 0%, #996515 100%);
+            border-image-slice: 1;
+        }
+
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 1px;
+            bottom: -4px; left: 0; background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased font-sans">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-4 px-6 md:px-12 bg-black/90 backdrop-blur-md border-b border-gold/20">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-xl md:text-2xl font-bold tracking-widest text-gold leading-none uppercase">The Best Barber</span>
+                <span class="text-[9px] uppercase tracking-[0.4em] text-gray-300">Hairs & Beards</span>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-8 font-sans uppercase tracking-widest text-[11px]">
+                <a href="#home" class="nav-link text-white hover:text-gold transition-colors relative">Accueil</a>
+                <a href="#services" class="nav-link text-white hover:text-gold transition-colors relative">Services</a>
+                <a href="#gallery" class="nav-link text-white hover:text-gold transition-colors relative">Le Salon</a>
+                <a href="#contact" class="nav-link text-white hover:text-gold transition-colors relative">Contact</a>
+                <a href="tel:0603075876" class="bg-gold text-black px-6 py-2.5 font-bold hover:bg-gold-light transition-all rounded-sm">
+                    RESERVER
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-gold focus:outline-none p-2">
+                <i class="ph ph-list text-3xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-black border-b border-gold/30 p-8 space-y-6 text-center uppercase tracking-widest text-xs font-bold">
+            <a href="#home" class="text-white hover:text-gold block py-2">Accueil</a>
+            <a href="#services" class="text-white hover:text-gold block py-2">Services</a>
+            <a href="#gallery" class="text-white hover:text-gold block py-2">Le Salon</a>
+            <a href="#contact" class="text-white hover:text-gold block py-2">Contact</a>
+            <a href="tel:0603075876" class="bg-gold text-black py-4 block rounded-sm">06 03 07 58 76</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <img src="images/interieur2.JPG" alt="Barber Shop" class="w-full h-full object-cover">
+        </div>
+
+        <div class="relative z-20 text-center px-6 max-w-5xl mx-auto">
+            <p class="text-gold font-sans tracking-[0.4em] uppercase text-xs md:text-sm mb-4">Luxe & Tradition à Marrakech</p>
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-8xl font-bold mb-6 text-white leading-tight">
+                L'Art du <br> <span class="text-gold-gradient italic">Style Royal</span>
+            </h1>
+            <p class="text-gray-200 text-sm md:text-xl mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+                Situé au Centre Commercial Almazar, The Best Barber vous offre une expérience de soins inégalée dans un cadre somptueux.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 px-4">
+                <a href="#services" class="bg-gold text-black px-10 py-4 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
+                    Nos Prestations
+                </a>
+                <a href="tel:0603075876" class="border border-gold text-gold px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-black transition-all">
+                    Nous Appeler
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-rich border-t border-gold/10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4 text-gold">Services Premium</h2>
+                <div class="w-20 h-[1px] bg-gold mx-auto mb-4"></div>
+                <p class="text-gray-400 uppercase tracking-widest text-[10px]">Excellence et Précision</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-luxury border border-gold/20 p-8 text-center transition-all duration-300">
+                    <i class="ph ph-scissors text-5xl text-gold mb-6 block"></i>
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-white">Coupe Royale</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Un rituel complet incluant diagnostic, coupe aux ciseaux et coiffage d'exception.</p>
+                    <p class="text-gold font-bold text-xl font-serif">À partir de 50 DH</p>
+                </div>
+                <div class="service-card bg-luxury border border-gold/20 p-8 text-center transition-all duration-300">
+                    <i class="ph ph-razor text-5xl text-gold mb-6 block"></i>
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-white">Taille de Barbe</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Sculpture précise à la lame, serviette chaude et application d'huiles rares.</p>
+                    <p class="text-gold font-bold text-xl font-serif">À partir de 50 DH</p>
+                </div>
+                <div class="service-card bg-luxury border border-gold/20 p-8 text-center transition-all duration-300">
+                    <i class="ph ph-crown text-5xl text-gold mb-6 block"></i>
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-white">Soin Visage Gold</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Nettoyage profond et soin hydratant pour une peau revitalisée et éclatante.</p>
+                    <p class="text-gold font-bold text-xl font-serif">À partir de 50 DH</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-black border-t border-gold/10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">Le Salon <span class="text-gold italic">Almazar</span></h2>
+                <p class="text-gray-400 font-light">Un cadre impérial pour un moment de détente absolue.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <img src="images/image.JPG" class="w-full h-72 object-cover rounded-sm border border-gold/10 shadow-xl" alt="Intérieur Salon">
+                <img src="images/interieur3.JPG" class="w-full h-72 object-cover rounded-sm border border-gold/10 shadow-xl" alt="Fauteuils Dorés">
+                <img src="images/exterieur.JPG" class="w-full h-72 object-cover rounded-sm border border-gold/10 shadow-xl" alt="Détails Luxe">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-rich border-t border-gold/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div class="space-y-10">
+                    <div>
+                        <h2 class="font-serif text-4xl font-bold text-gold mb-6 italic">Informations</h2>
+                        <div class="w-12 h-1 bg-gold mb-8"></div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-6">
+                            <i class="ph ph-map-pin text-3xl text-gold"></i>
+                            <div>
+                                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-1">Adresse</h4>
+                                <p class="text-gray-300">Centre Commercial Almazar, <br> H2V6+9PR, Marrakech</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <i class="ph ph-clock text-3xl text-gold"></i>
+                            <div>
+                                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-1">Horaires d'ouverture</h4>
+                                <p class="text-gray-300 font-bold text-lg">Lundi — Dimanche</p>
+                                <p class="text-gold font-bold">09:00 — 00:00 (Minuit)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <i class="ph ph-phone text-3xl text-gold"></i>
+                            <div>
+                                <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-1">Contact direct</h4>
+                                <a href="tel:0603075876" class="text-2xl font-serif text-white hover:text-gold transition-colors font-bold italic">06 03 07 58 76</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-96 bg-luxury border border-gold/20 flex items-center justify-center relative overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 bg-black/40 z-10"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.4799911061486!2d-7.988085836845316!3d31.593304962901154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafefdb3c92a3b5%3A0x142d9796d891a401!2sThe%20Best%20Barber!5e0!3m2!1sfr!2sma!4v1768417635405!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a href="https://maps.app.goo.gl/veHMTXYWbZQLm8pe6" target="_blank" class="relative z-20 bg-gold text-black px-8 py-4 font-bold uppercase tracking-widest text-xs">
+                        Voir sur Google Maps
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black border-t border-gold/20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col items-center space-y-6">
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl font-bold tracking-[0.2em] text-gold uppercase">The Best Barber</span>
+                    <span class="text-[9px] uppercase tracking-[0.6em] text-gray-500 mt-2">Premium Experience</span>
+                </div>
+                
+                <div class="flex space-x-8 text-2xl">
+                    <a href="https://www.instagram.com/thebestbarberman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-gold transition-colors"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="https://www.tiktok.com/@thebestbarberman?is_from_webapp=1&sender_device=pc" class="text-gray-400 hover:text-gold transition-colors"><i class="ph ph-tiktok-logo"></i></a>
+                    <a href="tel:0603075876" class="text-gray-400 hover:text-gold transition-colors"><i class="ph ph-whatsapp-logo"></i></a>
+                </div>
+
+                <div class="w-full max-w-xs h-[1px] bg-gold/20"></div>
+                
+                <p class="text-gray-500 text-[10px] uppercase tracking-widest leading-loose">
+                    © 2024 THE BEST BARBER MARRAKECH ALMAZAR. <br> TOUS DROITS RÉSERVÉS.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="tel:0603075876" class="fixed bottom-6 right-6 w-16 h-16 bg-gold text-black rounded-full shadow-2xl z-50 flex items-center justify-center lg:hidden animate-bounce">
+        <i class="ph ph-phone-call text-3xl"></i>
+    </a>
+
+    <script>
+        // Gestion du menu mobile
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Effet scroll navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-black', 'py-2');
+                nav.classList.remove('bg-black/90', 'py-4');
+            } else {
+                nav.classList.remove('bg-black', 'py-2');
+                nav.classList.add('bg-black/90', 'py-4');
+            }
+        });
+    </script>
+
+</body>
+</html>
